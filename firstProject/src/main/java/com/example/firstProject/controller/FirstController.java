@@ -12,4 +12,10 @@ public class FirstController {
         model.addAttribute("username", "지원");
         return "greetings"; // templates/greetings.mustache -> 브라우저로 전송
     }
+
+    @GetMapping("/bye")
+    public String seeYouNext(Model model) {
+        model.addAttribute("nickname","jiwon");
+        return "goodbye";
+    }
 }
