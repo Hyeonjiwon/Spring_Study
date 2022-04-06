@@ -5,7 +5,7 @@ import com.example.memberproject.domain.Member;
 import java.util.List;
 import java.util.Optional;
 
-public interface MemberReository {
+public interface MemberRepository {
     Member save(Member member); // 회원정보 저장
     // null 처리를 위해 Optional로 감싸기
     Optional<Member> findById(Long id); // id로 회원 찾기
