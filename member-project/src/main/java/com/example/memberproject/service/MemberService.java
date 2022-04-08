@@ -3,15 +3,19 @@ package com.example.memberproject.service;
 import com.example.memberproject.domain.Member;
 import com.example.memberproject.repository.MemberRepository;
 import com.example.memberproject.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
     // 직접 생성하는 것이 아니라 외부에서 넣어주도록
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
