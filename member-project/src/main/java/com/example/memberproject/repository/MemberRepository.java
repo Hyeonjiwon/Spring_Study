@@ -5,6 +5,7 @@ import com.example.memberproject.domain.Member;
 import java.util.List;
 import java.util.Optional;
 
+// 회원 저장 역할
 public interface MemberRepository {
     Member save(Member member); // 회원정보 저장
     // null 처리를 위해 Optional로 감싸기
