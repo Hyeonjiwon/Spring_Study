@@ -1,5 +1,6 @@
 package com.example.memberproject;
 
+import com.example.memberproject.aop.TimeTraceAop;
 import com.example.memberproject.repository.*;
 import com.example.memberproject.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,12 +25,18 @@ public class SpringConfig {
         return new MemberService(memberRepository);
     }
 
-//    @Bean
-//    public MemberRepository memberRepository() {
+    /*
+    @Bean // 스프링 빈에 직접 AOP 등록
+    public TimeTraceAop timeTraceAop() {
+        return new TimeTraceAop();
+    }*/
+
+/*    @Bean
+    public MemberRepository memberRepository() {
         // return new MemoryMemberRepository();
         // return new JdbcMemberRepository(dataSource);
         // return new JdbcTemplateMemberRepository(dataSource);
-        // return new JpaMemberRepository(em);
-//    }
+        return new JpaMemberRepository(em);
+    }*/
 
 }
